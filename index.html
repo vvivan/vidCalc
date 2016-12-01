@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VIdeo calculator by Ivan Videnovic</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+	<body>
+		<script src="calculate.js"></script>
+		<div class="header">
+			<h1>Video calculator</h1>
+			<h2>Calculate the amount of space(discs) needed for your video</h2>
+		</div>
+		
+		<div id="placeholder">
+			
+			<form action="" id="videocalculator">
+				<label for="media">Type of media:</label>
+				<select name="media" id="media">
+					<option value="4.7">4.7 GB - SS Single layer DVD disc</option>
+					<option value="8.5">8.5 GB - SS Double layer DVD disc</option>
+					<option value="25">25 GB - Single layer BRD disc</option>
+					<option value="50">50 GB - Double layer BRD disc</option>
+				</select><br>
+				
+				<label for="bps">Video bitrate</label>
+				<input type="text" name="bps" id="bps" placeholder="Insert video bps rate"> Mbps<br>
+				
+				<label for="length">Video length</label>
+				<input type="text" name="videolength" id="videolength" placeholder="Insert video length in min"> min
+
+			</form>
+			
+			<button type="button" onclick="calculateDisc()">Calculate</button><br>
+			
+			<p id="report"></p>
+			
+			<!--<div id="progresbar">
+				<div id="progress">
+					<div id="label"></div>
+				</div>
+			</div>-->
+			
+			<div id="footer">Web deign - Ivan videnovic copyright &copy;2016</div>
+			
+		</div>
+	</body>
+</html>
