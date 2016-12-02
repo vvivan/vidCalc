@@ -3,6 +3,13 @@ function calculateDisc() {
 	var videoMemory = parseFloat( document.getElementById("videocalculator").elements["bps"].value);
 	var videoTimeline = parseFloat( document.getElementById("videocalculator").elements["videolength"].value);
 	
+    // check if form is filled correctly
+    if (isNaN(videoMemory) || isNaN(videoTimeline) || videoMemory <= 0 || videoTimeline <= 0){
+        //document.getElementById("erreport").innerHTML = 'Fill data correctly!<br>Video bitrate and video length fields must be numbers.';
+        alert("CALCULATION FAILED!\n\nFill data correctly - Video bitrate and video length fields must be numbers, and greater then 0.");
+    }
+    else {
+    // make calculation
 	var videoTimelineSec = videoTimeline * 60;
 	var videoMemTotal = videoMemory * videoTimelineSec;
 	var videoMemTotalGB = videoMemTotal / (8*1024);
@@ -82,4 +89,5 @@ function calculateDisc() {
 	var child = document.getElementById("footer");
 	element.insertBefore(progressBox,child);
 	/////////////////////////////////*/
+    }
 }
